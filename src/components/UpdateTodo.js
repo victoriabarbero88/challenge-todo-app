@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 
 
-
 class UpdateTodo extends Component {
   constructor(props) {
     super(props);
@@ -63,7 +62,7 @@ class UpdateTodo extends Component {
           
             <input type="text" name="title" value={this.state.title} onChange={e => this.handleChange(e)}/>
             
-            <textarea  name="body" value={this.state.body} onChange={e => this.handleChange(e)}/>
+            <textarea  name="body" value={this.state.body} onChange={e => this.handleChange(e)} className="Divtext"/>
             
             <input type="submit" value="Submit" className="button" />
           </div>

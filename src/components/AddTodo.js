@@ -18,7 +18,7 @@ class AddTodo extends Component {
     const body = this.state.body;
 
     axios
-      .post(`http://localhost:4000/api/v1/add`, {title, body})
+      .post(`http://localhost:4000/api/v1/todos`, {title, body})
       .then(() => {       
         this.setState({title: "", body: ""})
 

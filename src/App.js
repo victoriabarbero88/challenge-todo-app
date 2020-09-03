@@ -16,14 +16,7 @@ class App extends Component {
       <div >
         <AddTodo />
         <TodoList />
-        <Switch>
-          <Route exact path='/todos' component={TodoList}/>
-          <Route exact path='/todos' component={AddTodo}/>
-          <Route exact path='/:id' component={UpdateTodo}/>
-
-
-          
-        </Switch>
+       <UpdateTodo />
         
       </div>
     );
