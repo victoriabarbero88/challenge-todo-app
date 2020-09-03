@@ -47,7 +47,8 @@ class AddTodo extends Component {
                 onChange={e => this.handleChange(e)}
                 placeholder="Title"
               />
-              <textarea
+              <input
+                type="text"
                 name="body"
                 value={this.state.body}
                 onChange={e => this.handleChange(e)}

@@ -6,6 +6,8 @@ body, html {
   height: 100%;
 }
 
-.form {
-  
+.formPlusButtons {
+  display: flex;
+  flex-direction: column;
 }
+
