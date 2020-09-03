@@ -9,16 +9,13 @@ class UpdateTodo extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
-    const todoId = this.props.id;
+    const { params } = this.props.match;
     
     axios
-      .get(`http://localhost:4000/api/v1/todos/${todoId}`)
+      .get(`http://localhost:4000/api/v1/todos/${params.id}`)
       .then(resonseFromApi => {
         const theTodo = resonseFromApi.data;
-        //console.log(thePet)
         this.setState(theTodo);
-        //console.log(this.state)
       })
       .catch(err => {
         console.log(err);
@@ -31,16 +28,16 @@ class UpdateTodo extends Component {
     const title = this.state.title;
     const body = this.state.body;
 
-
-    const todoId = this.props.match.params.id;
+    const { params } = this.props.match;
    
 
     axios
-      .put(`http://localhost:4000/api/v1/todos/${todoId}`, {
+      .put(`http://localhost:4000/api/v1/todos/${params.id}`, {
         title,
         body
       })
       .then(() => {
+       
         this.props.history.push("/");
       })
       .catch(error => console.log(error));
@@ -59,10 +56,10 @@ class UpdateTodo extends Component {
        
         <form onSubmit={this.handleFormSubmit}>
           <div className="Div">
-          
-            <input type="text" name="title" value={this.state.title} onChange={e => this.handleChange(e)}/>
             
-            <textarea  name="body" value={this.state.body} onChange={e => this.handleChange(e)} className="Divtext"/>
+            <input type="text" name="title" value={this.state.title} onChange={e => this.handleChange(e)} />
+           
+            <textarea  name="body" value={this.state.body} onChange={e => this.handleChange(e)}/>
             
             <input type="submit" value="Submit" className="button" />
           </div>
