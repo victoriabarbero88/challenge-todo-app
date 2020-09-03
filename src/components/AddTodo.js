@@ -35,10 +35,10 @@ class AddTodo extends Component {
   render() {
     return (
       <div className="add">
-       
+        <h2>To Do + </h2>
         <div>
           <form onSubmit={this.handleFormSubmit}>
-            <div className="addDiv">
+            <div className="form">
               
               <input
                 type="text"
@@ -48,7 +48,6 @@ class AddTodo extends Component {
                 placeholder="Title"
               />
               <textarea
-                
                 name="body"
                 value={this.state.body}
                 onChange={e => this.handleChange(e)}

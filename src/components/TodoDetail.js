@@ -31,7 +31,7 @@ class TodoDetail extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="list">
           <Link to={`/todos/edit/${this.state._id}`}>
             <h2>{this.state.title}</h2>
             <p>{this.state.body}</p>

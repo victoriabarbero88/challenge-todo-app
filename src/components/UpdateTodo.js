@@ -55,10 +55,9 @@ class UpdateTodo extends Component {
       <div className="edit">
        
         <form onSubmit={this.handleFormSubmit}>
-          <div className="Div">
+          <div className="form">
             
             <input type="text" name="title" value={this.state.title} onChange={e => this.handleChange(e)} />
-           
             <textarea  name="body" value={this.state.body} onChange={e => this.handleChange(e)}/>
             
             <input type="submit" value="Submit" className="button" />
