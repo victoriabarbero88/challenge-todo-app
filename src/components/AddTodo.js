@@ -21,7 +21,7 @@ class AddTodo extends Component {
       .post(`http://localhost:4000/api/v1/todos`, {title, body})
       .then(() => {       
         this.setState({title: "", body: ""})
-
+        
       })
       .catch(error => console.log(error));
   };

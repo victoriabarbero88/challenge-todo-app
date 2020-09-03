@@ -18,9 +18,9 @@ class TodoList extends Component {
     });
   };
   deleteTodo = (todoId) => {
-
+    
     axios
-      .delete(`ttp://localhost:4000/api/v1/todos/${todoId}`)
+      .delete(`http://localhost:4000/api/v1/todos/${todoId}`)
       .then (() =>this.getAllTodos()) 
       .catch(err => {
         console.log(err);
